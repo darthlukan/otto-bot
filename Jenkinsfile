@@ -36,8 +36,7 @@ mavenNode {
           version = canaryVersion
         }
         //stash deployment manifests
-        // stash includes: '**/*.yml', name: stashName
-        sh 'npm install'
+        stash includes: '**/*.yml', name: stashName
       }
     }
   }
@@ -52,23 +51,6 @@ if (utils.isCD()) {
         environment = envStage
       }
       setupScript?.setupEnvironmentPost(envStage)
-    }
-
-    stage('Approve') {
-      approve {
-        room = null
-        version = canaryVersion
-        environment = 'Stage'
-      }
-    }
-    
-    stage('Rollout to Run') {
-      unstash stashName
-      setupScript?.setupEnvironmentPre(envProd)
-      apply {
-        environment = envProd
-      }
-      setupScript?.setupEnvironmentPost(envProd)
     }
   }
 }
