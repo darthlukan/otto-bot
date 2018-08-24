@@ -35,8 +35,10 @@ mavenNode {
         mavenCanaryRelease {
           version = canaryVersion
         }
-        //stash deployment manifests
-        stash includes: '**/*.yml', name: stashName
+
+        sh 'npm install'
+        // stash deployment manifests
+        // stash includes: '**/*.yml', name: stashName
       }
     }
   }
