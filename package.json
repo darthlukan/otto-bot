@@ -3,7 +3,7 @@
   "version": "0.0.1-dev",
   "description": "A Hubot instance for the Red Hat Automation COP using the Rocket.Chat adaptor.",
   "main": "bin/hubot",
-  "repository": "git@github.com:darthlukan/otto-bot.git",
+  "repository": "https://github.com/darthlukan/otto-bot",
   "author": "Brian Tomlinson <btomlins@redhat.com>",
   "license": "GPLv3",
   "private": false,
