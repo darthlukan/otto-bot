@@ -14,7 +14,7 @@ export HUBOT_NAME=otto
 export ROCKETCHAT_URL=http://localhost
 export ROCKETCHAT_USER=otto
 export ROCKETCHAT_PASSWORD=otto
-export ROCKETCHAT_ROOM=general
+export ROCKETCHAT_ROOM=automation-cop
 
 # Lobbeth they holy hand-grenade!
 exec node_modules/.bin/hubot -a rocketchat "$@"
