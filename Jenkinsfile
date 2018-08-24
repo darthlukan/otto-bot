@@ -37,6 +37,9 @@ mavenNode {
         }
         //stash deployment manifests
         stash includes: '**/*.yml', name: stashName
+        steps {
+          sh 'npm install'
+        }
       }
     }
   }
