@@ -36,7 +36,7 @@ mavenNode {
           version = canaryVersion
         }
         //stash deployment manifests
-        stash includes: '**/*.yml', name: stashName
+        // stash includes: '**/*.yml', name: stashName
         steps {
           sh 'npm install'
         }
