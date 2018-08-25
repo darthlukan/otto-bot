@@ -3,7 +3,10 @@
   "version": "0.0.1-dev",
   "description": "A Hubot instance for the Red Hat Automation COP using the Rocket.Chat adaptor.",
   "main": "bin/hubot",
-  "repository": "https://github.com/darthlukan/otto-bot",
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/darthlukan/otto-bot"
+  },
   "author": "Brian Tomlinson <btomlins@redhat.com>",
   "license": "GPLv3",
   "private": false,
@@ -20,7 +23,8 @@
   "scripts": {
     "debug": "node --inspect --inspect-brk -r dotenv/config node_modules/hubot/bin/hubot.js -a rocketchat --name otto",
     "shell": "node -r dotenv/config node_modules/hubot/bin/hubot.js -a shell --name otto",
-    "local": "node -r dotenv/config node_modules/hubot/bin/hubot.js -a rocketchat --name otto"
+    "local": "node -r dotenv/config node_modules/hubot/bin/hubot.js -a rocketchat --name otto",
+    "start": "bin/hubot"
   },
   "dependencies": {
     "coffeescript": "^2.2.2",
