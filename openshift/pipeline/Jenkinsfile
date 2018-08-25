@@ -1,0 +1,6 @@
+node('nodejs') {
+  stage 'build'
+  openshiftBuild(buildConfig: 'otto-bot', showBuildLogs: 'true'}
+  stage 'deploy'
+  openshiftDeploy(deploymentConfig: 'otto-bot')
+}
