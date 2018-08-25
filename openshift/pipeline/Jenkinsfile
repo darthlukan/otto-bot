@@ -1,6 +1,20 @@
-node('nodejs') {
-  stage 'build'
-  openshiftBuild(buildConfig: 'otto-bot', showBuildLogs: 'true')
-  stage 'deploy'
-  openshiftDeploy(deploymentConfig: 'otto-bot')
+pipeline {
+  agent {
+    node {
+      label 'nodejs'
+    }
+  }
+  options {
+    timeout(time: 5, unit: 'MINUTES')
+  }
+
+  stages {
+    stage('build') {
+      openshiftBuild(buildConfig: 'otto-bot', showBuildLogs: 'true')
+    }
+
+    stage('deploy') {
+      openshiftDeploy(deploymentConfig: 'otto-bot')
+    }
+  }
 }
