@@ -11,7 +11,7 @@ export HUBOT_ADAPTER=rocketchat
 export HUBOT_NAME=otto
 
 # Rocket.Chat vars
-export ROCKETCHAT_URL=http://localhost
+export ROCKETCHAT_URL=https://chat.consulting.redhat.com
 export ROCKETCHAT_USER=otto
 export ROCKETCHAT_PASSWORD=otto
 export ROCKETCHAT_ROOM=automation-cop
